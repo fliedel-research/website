@@ -841,3 +841,63 @@
     margin:0!important;
   }
 }
+
+
+/* ============================================================
+   V4.2 — FINAL Latest News match to approved screenshot
+   ============================================================ */
+
+/* Laurianne card: make the graphical abstract visually larger */
+.news-side .publication-card .graphical-abstract{
+  height:208px!important;
+  max-height:208px!important;
+  width:100%!important;
+  object-fit:contain!important;
+  margin:4px 0 6px!important;
+}
+
+/* Slightly tighten the surrounding text so the enlarged abstract fits cleanly */
+.news-side .publication-card .news-body{
+  padding:20px 22px!important;
+}
+.news-side .publication-card h3{
+  margin-bottom:4px!important;
+}
+.news-side .publication-card p{
+  margin-top:2px!important;
+  margin-bottom:8px!important;
+  line-height:1.42!important;
+}
+
+/* Suppress the green Click & Read badge injected by the browser extension.
+   The site itself contains no CR asset or markup. */
+.news-side .publication-card a[href*="doi.org"] ~ *,
+.news-side .publication-card a[href*="chemistry-europe"] ~ *,
+.news-side .publication-card a[href*="wiley"] ~ *{
+  /* intentionally not global; specific elements below are hidden */
+}
+
+.news-side .publication-card img[src*="click"],
+.news-side .publication-card img[src*="read"],
+.news-side .publication-card img[alt*="Click"],
+.news-side .publication-card img[alt*="Read"],
+.news-side .publication-card [class*="clickandread"],
+.news-side .publication-card [class*="click-read"],
+.news-side .publication-card [class*="click_read"],
+.news-side .publication-card [id*="clickandread"],
+.news-side .publication-card [id*="click-read"],
+.news-side .publication-card span[style*="background"][style*="green"],
+.news-side .publication-card span[style*="background-color"][style*="green"]{
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+}
+
+/* Keep the outbound paper link itself clean */
+.news-side .publication-card a{
+  display:inline-block!important;
+  width:auto!important;
+}
