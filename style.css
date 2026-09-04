@@ -117,3 +117,82 @@
   .research-card h3{max-width:58%;margin-top:45px!important}
   .research-card p{max-width:78%}
 }
+
+
+/* V2.3 — robust research-card layout: images live in a fixed visual zone */
+.cards{
+  align-items:stretch;
+}
+.research-card{
+  display:grid!important;
+  grid-template-rows:auto 145px auto 1fr auto;
+  overflow:hidden!important;
+  padding:24px 26px 25px!important;
+  min-height:405px!important;
+}
+.research-card .num{
+  grid-row:1;
+}
+.research-card .card-visual,
+.research-card .card-visual.polymer,
+.research-card .card-visual.sustainable{
+  position:static!important;
+  grid-row:2;
+  width:100%!important;
+  height:145px!important;
+  margin:0!important;
+  padding:4px 0 8px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+.research-card .card-visual img{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  max-width:92%!important;
+  max-height:132px!important;
+  object-fit:contain!important;
+  transform:none!important;
+}
+.research-card:first-child .card-visual img{
+  max-height:138px!important;
+  max-width:72%!important;
+}
+.research-card:nth-child(2) .card-visual img{
+  max-width:96%!important;
+  max-height:126px!important;
+}
+.research-card:nth-child(3) .card-visual img{
+  max-width:96%!important;
+  max-height:118px!important;
+}
+.research-card h3{
+  grid-row:3;
+  margin:10px 0 12px!important;
+  max-width:none!important;
+}
+.research-card p{
+  grid-row:4;
+  max-width:none!important;
+  margin:0 0 12px!important;
+}
+.research-card small{
+  grid-row:5;
+  margin-top:0!important;
+}
+@media(max-width:1100px){
+  .research-card{min-height:390px!important}
+  .research-card .card-visual,
+  .research-card .card-visual.polymer,
+  .research-card .card-visual.sustainable{height:132px!important}
+  .research-card .card-visual img{max-height:120px!important}
+}
+@media(max-width:850px){
+  .research-card{min-height:370px!important}
+  .research-card .card-visual,
+  .research-card .card-visual.polymer,
+  .research-card .card-visual.sustainable{height:150px!important}
+  .research-card .card-visual img{max-height:138px!important}
+}
