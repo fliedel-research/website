@@ -584,18 +584,7 @@
   margin-top:0!important;
 }
 
-/* Keep browser-injected images/SVGs from occupying space inside outbound news links.
-   (The page itself contains no Click & Read badge.) */
-.news-section a > img,
-.news-section a > svg,
-.news-section a .clickandread,
-.news-section a [class*="click-read"],
-.news-section a [class*="clickandread"]{
-  display:none!important;
-  width:0!important;
-  height:0!important;
-  margin:0!important;
-}
+
 
 /* Mobile continuity */
 @media(max-width:900px){
