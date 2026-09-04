@@ -376,3 +376,11 @@
  grid-column:1!important;grid-row:4!important;margin:0 0 12px!important;max-width:none!important}
 .research-card small,.research-card:first-child small,.research-card:nth-child(2) small,.research-card:nth-child(3) small{
  grid-column:1!important;grid-row:5!important;margin-top:0!important;align-self:end!important}
+
+
+/* V2.6 — user's RX + catalytic transformation montage in card 01 */
+.research-card:first-child .card-visual img{
+  max-width:92%!important;
+  max-height:136px!important;
+  object-fit:contain!important;
+}
