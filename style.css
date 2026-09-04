@@ -196,3 +196,183 @@
   .research-card .card-visual.sustainable{height:150px!important}
   .research-card .card-visual img{max-height:138px!important}
 }
+
+
+/* V2.4 — asymmetrical research cards:
+   card 01 = two-column image/text
+   cards 02–03 = landscape visual over text */
+.cards{
+  align-items:stretch;
+}
+
+/* Shared */
+.research-card{
+  min-height:390px!important;
+  padding:24px 26px 24px!important;
+}
+
+/* CARD 01 — portrait crystallographic structure, two-column layout */
+.research-card:first-child{
+  display:grid!important;
+  grid-template-columns:46% 54%!important;
+  grid-template-rows:auto 1fr auto!important;
+  column-gap:18px!important;
+  align-items:start!important;
+}
+.research-card:first-child .num{
+  grid-column:1 / -1!important;
+  grid-row:1!important;
+  margin-bottom:4px!important;
+}
+.research-card:first-child .card-visual{
+  grid-column:2!important;
+  grid-row:2 / 4!important;
+  position:static!important;
+  width:100%!important;
+  height:260px!important;
+  margin:2px 0 0!important;
+  padding:0!important;
+  align-self:center!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+.research-card:first-child .card-visual img{
+  width:auto!important;
+  height:auto!important;
+  max-width:98%!important;
+  max-height:250px!important;
+  object-fit:contain!important;
+  transform:none!important;
+}
+.research-card:first-child h3{
+  grid-column:1!important;
+  grid-row:2!important;
+  align-self:start!important;
+  margin:42px 0 12px!important;
+  max-width:none!important;
+}
+.research-card:first-child p{
+  grid-column:1!important;
+  grid-row:2!important;
+  align-self:start!important;
+  margin:78px 0 0!important;
+  max-width:none!important;
+}
+.research-card:first-child small{
+  grid-column:1!important;
+  grid-row:3!important;
+  align-self:end!important;
+  margin-top:16px!important;
+}
+
+/* CARDS 02–03 — landscape image above text */
+.research-card:nth-child(2),
+.research-card:nth-child(3){
+  display:grid!important;
+  grid-template-rows:auto 145px auto 1fr auto!important;
+}
+.research-card:nth-child(2) .card-visual,
+.research-card:nth-child(3) .card-visual{
+  position:static!important;
+  width:100%!important;
+  height:145px!important;
+  margin:0!important;
+  padding:4px 0 6px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+.research-card:nth-child(2) .card-visual img{
+  max-width:95%!important;
+  max-height:128px!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.research-card:nth-child(3) .card-visual img{
+  max-width:96%!important;
+  max-height:120px!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.research-card:nth-child(2) h3,
+.research-card:nth-child(3) h3{
+  margin:10px 0 12px!important;
+  max-width:none!important;
+}
+.research-card:nth-child(2) p,
+.research-card:nth-child(3) p{
+  max-width:none!important;
+  margin:0 0 12px!important;
+}
+.research-card:nth-child(2) small,
+.research-card:nth-child(3) small{
+  margin-top:0!important;
+}
+
+/* Responsive: collapse card 01 gracefully */
+@media(max-width:1100px){
+  .research-card:first-child{
+    grid-template-columns:48% 52%!important;
+    column-gap:12px!important;
+  }
+  .research-card:first-child .card-visual{
+    height:225px!important;
+  }
+  .research-card:first-child .card-visual img{
+    max-height:215px!important;
+  }
+}
+@media(max-width:850px){
+  .research-card:first-child{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    grid-template-rows:auto 150px auto auto auto!important;
+  }
+  .research-card:first-child .num{grid-column:1!important;grid-row:1!important}
+  .research-card:first-child .card-visual{
+    grid-column:1!important;
+    grid-row:2!important;
+    height:150px!important;
+  }
+  .research-card:first-child .card-visual img{max-height:142px!important}
+  .research-card:first-child h3{
+    grid-column:1!important;
+    grid-row:3!important;
+    margin:10px 0 12px!important;
+  }
+  .research-card:first-child p{
+    grid-column:1!important;
+    grid-row:4!important;
+    margin:0 0 12px!important;
+  }
+  .research-card:first-child small{
+    grid-column:1!important;
+    grid-row:5!important;
+    margin-top:0!important;
+  }
+}
+
+/* V2.5 — unified landscape visual grammar for all research cards */
+.research-card,.research-card:first-child,.research-card:nth-child(2),.research-card:nth-child(3){
+ display:grid!important;grid-template-columns:1fr!important;grid-template-rows:auto 150px auto 1fr auto!important;
+ min-height:400px!important;padding:24px 26px!important}
+.research-card .num,.research-card:first-child .num{grid-column:1!important;grid-row:1!important;margin:0 0 2px!important}
+.research-card .card-visual,.research-card:first-child .card-visual,.research-card:nth-child(2) .card-visual,.research-card:nth-child(3) .card-visual{
+ grid-column:1!important;grid-row:2!important;position:static!important;width:100%!important;height:150px!important;
+ margin:0!important;padding:4px 0 8px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+.research-card .card-visual img,.research-card:first-child .card-visual img,.research-card:nth-child(2) .card-visual img,.research-card:nth-child(3) .card-visual img{
+ width:auto!important;height:auto!important;max-width:96%!important;max-height:136px!important;object-fit:contain!important;transform:none!important}
+.research-card:first-child .card-visual img{max-width:98%!important;max-height:138px!important}
+.research-card:nth-child(2) .card-visual img{max-width:95%!important;max-height:130px!important}
+.research-card:nth-child(3) .card-visual img{max-width:96%!important;max-height:122px!important}
+.research-card h3,.research-card:first-child h3,.research-card:nth-child(2) h3,.research-card:nth-child(3) h3{
+ grid-column:1!important;grid-row:3!important;margin:10px 0 12px!important;max-width:none!important}
+.research-card p,.research-card:first-child p,.research-card:nth-child(2) p,.research-card:nth-child(3) p{
+ grid-column:1!important;grid-row:4!important;margin:0 0 12px!important;max-width:none!important}
+.research-card small,.research-card:first-child small,.research-card:nth-child(2) small,.research-card:nth-child(3) small{
+ grid-column:1!important;grid-row:5!important;margin-top:0!important;align-self:end!important}
