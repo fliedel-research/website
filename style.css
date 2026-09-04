@@ -849,9 +849,9 @@
 
 /* Laurianne card: make the graphical abstract visually larger */
 .news-side .publication-card .graphical-abstract{
-  height:308px!important;
-  max-height:308px!important;
-  width:1500%!important;
+  height:208px!important;
+  max-height:208px!important;
+  width:100%!important;
   object-fit:contain!important;
   margin:4px 0 6px!important;
 }
