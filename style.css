@@ -384,3 +384,42 @@
   max-height:136px!important;
   object-fit:contain!important;
 }
+
+/* V2.7 — final harmonisation of the three homepage research visuals */
+.research-card .card-visual,
+.research-card:first-child .card-visual,
+.research-card:nth-child(2) .card-visual,
+.research-card:nth-child(3) .card-visual{
+  height:165px!important;
+  padding:5px 2px 10px!important;
+  border-bottom:1px dotted rgba(10,64,105,.18);
+}
+.research-card .card-visual img{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+  filter:none!important;
+}
+.research-card:first-child .card-visual img{
+  max-width:98%!important;
+  max-height:150px!important;
+}
+.research-card:nth-child(2) .card-visual img{
+  max-width:96%!important;
+  max-height:143px!important;
+}
+.research-card:nth-child(3) .card-visual img{
+  max-width:97%!important;
+  max-height:137px!important;
+}
+.research-card,.research-card:first-child,.research-card:nth-child(2),.research-card:nth-child(3){
+  grid-template-rows:auto 165px auto 1fr auto!important;
+  min-height:420px!important;
+}
+.research-card h3,
+.research-card:first-child h3,
+.research-card:nth-child(2) h3,
+.research-card:nth-child(3) h3{
+  margin-top:14px!important;
+}
