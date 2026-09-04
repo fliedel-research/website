@@ -536,3 +536,76 @@
     max-height:420px!important;
   }
 }
+
+
+/* ============================================================
+   V4.0 — homepage final online order & Latest News lock
+   Selected Publications → Latest News → People → Join Us
+   ============================================================ */
+
+/* Slightly larger ChemistryEurope graphical abstract */
+.news-side .publication-card .graphical-abstract{
+  height:154px!important;
+  max-height:154px!important;
+  width:100%!important;
+  object-fit:contain!important;
+  margin:10px 0 14px!important;
+}
+
+/* Final ANR logo: single horizontal mark, generously sized and clean */
+.alexandre-content{
+  grid-template-columns:235px 1fr!important;
+  gap:30px!important;
+}
+.anr-logo{
+  width:225px!important;
+  max-width:100%!important;
+  height:auto!important;
+  max-height:82px!important;
+  object-fit:contain!important;
+  margin:auto!important;
+}
+
+/* Keep the BPC feature visually on the same scale as the other top-row news cards */
+.news-main{
+  min-height:300px!important;
+}
+.news-main>img{
+  min-height:300px!important;
+  max-height:300px!important;
+  object-fit:cover!important;
+}
+
+/* A little air between the principal homepage sections */
+.split + .news-section{
+  margin-top:0!important;
+}
+.news-section + .people{
+  margin-top:0!important;
+}
+
+/* Keep browser-injected images/SVGs from occupying space inside outbound news links.
+   (The page itself contains no Click & Read badge.) */
+.news-section a > img,
+.news-section a > svg,
+.news-section a .clickandread,
+.news-section a [class*="click-read"],
+.news-section a [class*="clickandread"]{
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  margin:0!important;
+}
+
+/* Mobile continuity */
+@media(max-width:900px){
+  .alexandre-content{
+    grid-template-columns:1fr!important;
+  }
+  .anr-logo{
+    margin:0!important;
+  }
+  .news-main>img{
+    max-height:420px!important;
+  }
+}
