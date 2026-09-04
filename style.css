@@ -847,14 +847,7 @@
    V4.2 — FINAL Latest News match to approved screenshot
    ============================================================ */
 
-/* Laurianne card: make the graphical abstract visually larger */
-.news-side .publication-card .graphical-abstract{
-  height:208px!important;
-  max-height:208px!important;
-  width:100%!important;
-  object-fit:contain!important;
-  margin:4px 0 6px!important;
-}
+
 
 /* Slightly tighten the surrounding text so the enlarged abstract fits cleanly */
 .news-side .publication-card .news-body{
@@ -900,4 +893,16 @@
 .news-side .publication-card a{
   display:inline-block!important;
   width:auto!important;
+}
+
+
+/* V4.3 — Laurianne graphical abstract: cropped asset + sane sizing */
+.news-side .publication-card .graphical-abstract{
+  display:block!important;
+  width:100%!important;
+  height:205px!important;
+  max-height:205px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  margin:4px 0 8px!important;
 }
