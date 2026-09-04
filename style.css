@@ -470,3 +470,69 @@
  .news-horizontal-content,.alexandre-content{grid-template-columns:1fr}
  .anr-logo{margin:0}
 }
+
+/* V3.2 — final News templating and visual balance */
+.news-featured{
+  grid-template-columns:1.15fr 1fr!important;
+}
+.news-main{
+  grid-template-columns:.82fr 1fr!important;
+  min-height:280px!important;
+}
+.news-main>img{
+  min-height:280px!important;
+  max-height:320px!important;
+  object-fit:cover!important;
+}
+.news-main .news-body{
+  padding:24px!important;
+}
+.bpc-logo{
+  width:130px!important;
+  max-height:74px!important;
+  margin:12px 0 12px!important;
+}
+.news-side{
+  grid-template-columns:1fr 1fr!important;
+}
+.news-side .photo-card img{
+  height:150px!important;
+}
+.news-side .publication-card .graphical-abstract{
+  height:120px!important;
+}
+.news-strip{
+  grid-template-columns:1fr 1fr!important;
+}
+.vincent-news h3{
+  max-width:94%;
+}
+.news-horizontal-content{
+  grid-template-columns:minmax(230px,.9fr) 1.1fr!important;
+}
+.vincent-abstract{
+  height:145px!important;
+}
+.alexandre-content{
+  grid-template-columns:180px 1fr!important;
+}
+.anr-logo{
+  width:170px!important;
+  max-height:72px!important;
+}
+.journal-label{display:none!important}
+
+/* Avoid browser-injected/reputation badges next to outbound paper links where possible */
+.news-section a img,
+.news-section a svg{
+  display:none!important;
+}
+
+@media(max-width:900px){
+  .news-main,.news-side,.news-strip,.news-horizontal-content,.alexandre-content{
+    grid-template-columns:1fr!important;
+  }
+  .news-main>img{
+    max-height:420px!important;
+  }
+}
