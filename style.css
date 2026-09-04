@@ -609,3 +609,235 @@
     max-height:420px!important;
   }
 }
+
+
+/* ============================================================
+   V4.1 — FINAL LOCKED LATEST NEWS
+   Reproduces the previously approved Latest News layout.
+   ============================================================ */
+
+.news-section{
+  padding:54px 2.1% 58px!important;
+  background:#f7fafc!important;
+  border-top:1px solid #e5edf3!important;
+}
+
+.news-section .section-head{
+  display:flex!important;
+  align-items:flex-end!important;
+  justify-content:space-between!important;
+  margin-bottom:26px!important;
+}
+.news-section .section-head h2{
+  margin:0!important;
+  font-size:30px!important;
+}
+.news-section .section-head p{
+  margin:0 2px 4px 0!important;
+}
+
+/* TOP ROW: 47% BPC / 53% split between publication + Kenzia */
+.news-featured{
+  display:grid!important;
+  grid-template-columns:1.03fr 1.12fr!important;
+  gap:14px!important;
+  align-items:stretch!important;
+}
+
+.news-main,
+.news-card,
+.news-strip article{
+  background:#fff!important;
+  border:1px solid #dfe8ef!important;
+  box-sizing:border-box!important;
+}
+
+/* BPC card: compact photo on left, text on right */
+.news-main{
+  display:grid!important;
+  grid-template-columns:43.5% 56.5%!important;
+  min-height:398px!important;
+  height:398px!important;
+}
+.news-main>img{
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:cover!important;
+  object-position:center 42%!important;
+}
+.news-main .news-body{
+  padding:27px 27px 22px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+}
+.news-main .news-body p{
+  margin-bottom:12px!important;
+}
+.bpc-logo{
+  width:222px!important;
+  height:auto!important;
+  max-height:126px!important;
+  margin:6px 0 13px!important;
+  object-fit:contain!important;
+}
+.news-main .news-body>a{
+  margin-top:auto!important;
+}
+
+/* Right half of top row: exactly two equal cards */
+.news-side{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:14px!important;
+  min-width:0!important;
+}
+.news-side .news-card{
+  height:398px!important;
+  min-width:0!important;
+  overflow:hidden!important;
+}
+.news-side .news-body{
+  padding:24px 22px!important;
+}
+.news-side .publication-card .news-body{
+  display:flex!important;
+  flex-direction:column!important;
+  height:100%!important;
+  box-sizing:border-box!important;
+}
+.news-side .publication-card .graphical-abstract{
+  width:100%!important;
+  height:176px!important;
+  max-height:176px!important;
+  object-fit:contain!important;
+  margin:7px 0 9px!important;
+  background:#fff!important;
+}
+.news-side .publication-card p{
+  margin:0 0 11px!important;
+}
+.news-side .publication-card a{
+  margin-top:auto!important;
+}
+
+/* Kenzia card */
+.news-side .photo-card>img{
+  width:100%!important;
+  height:218px!important;
+  object-fit:cover!important;
+  object-position:center 38%!important;
+}
+.news-side .photo-card .news-body{
+  padding:20px 22px!important;
+}
+
+/* BOTTOM ROW: Vincent / Alexandre 50:50 */
+.news-strip{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:14px!important;
+  margin-top:14px!important;
+}
+.news-strip article{
+  padding:22px 24px!important;
+  min-height:276px!important;
+}
+.news-strip h3{
+  margin-bottom:12px!important;
+}
+
+/* Vincent */
+.news-horizontal-content{
+  display:grid!important;
+  grid-template-columns:49% 1fr!important;
+  gap:25px!important;
+  align-items:center!important;
+}
+.vincent-abstract{
+  width:100%!important;
+  height:178px!important;
+  max-height:178px!important;
+  object-fit:contain!important;
+  margin:0!important;
+}
+.vincent-news h3{
+  max-width:94%!important;
+}
+
+/* Alexandre / ANR */
+.alexandre-content{
+  grid-template-columns:43% 1fr!important;
+  gap:30px!important;
+  align-items:center!important;
+}
+.anr-logo{
+  display:block!important;
+  width:285px!important;
+  max-width:100%!important;
+  height:auto!important;
+  max-height:105px!important;
+  object-fit:contain!important;
+  margin:0 auto!important;
+}
+
+/* Typography rhythm */
+.news-meta{
+  margin-bottom:10px!important;
+}
+.news-section h3{
+  line-height:1.16!important;
+}
+.news-section p{
+  line-height:1.47!important;
+}
+
+/* Suppress publisher/browser-injected Click & Read badges around the paper link. */
+.publication-card a[href*="doi.org"] + img,
+.publication-card a[href*="doi.org"] ~ img,
+.publication-card a[href*="doi.org"] + span,
+.publication-card a[href*="doi.org"] ~ span[class*="click"],
+.publication-card img[src*="click"],
+.publication-card img[alt*="Click"],
+.publication-card img[alt*="Read"],
+.publication-card [class*="clickandread"],
+.publication-card [class*="click-read"],
+.publication-card [id*="clickandread"]{
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .news-section{padding:42px 5%!important}
+  .news-section .section-head{display:block!important}
+  .news-section .section-head p{margin-top:8px!important}
+  .news-featured,
+  .news-main,
+  .news-side,
+  .news-strip,
+  .news-horizontal-content,
+  .alexandre-content{
+    grid-template-columns:1fr!important;
+  }
+  .news-main,
+  .news-side .news-card{
+    height:auto!important;
+    min-height:0!important;
+  }
+  .news-main>img{
+    height:340px!important;
+  }
+  .news-side .photo-card>img{
+    height:300px!important;
+  }
+  .anr-logo{
+    width:240px!important;
+    margin:0!important;
+  }
+}
