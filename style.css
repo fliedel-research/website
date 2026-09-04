@@ -584,7 +584,18 @@
   margin-top:0!important;
 }
 
-
+/* Keep browser-injected images/SVGs from occupying space inside outbound news links.
+   (The page itself contains no Click & Read badge.) */
+.news-section a > img,
+.news-section a > svg,
+.news-section a .clickandread,
+.news-section a [class*="click-read"],
+.news-section a [class*="clickandread"]{
+  display:none!important;
+  width:0!important;
+  height:0!important;
+  margin:0!important;
+}
 
 /* Mobile continuity */
 @media(max-width:900px){
@@ -838,9 +849,9 @@
 
 /* Laurianne card: make the graphical abstract visually larger */
 .news-side .publication-card .graphical-abstract{
-  height:208px!important;
-  max-height:208px!important;
-  width:100%!important;
+  height:308px!important;
+  max-height:308px!important;
+  width:1500%!important;
   object-fit:contain!important;
   margin:4px 0 6px!important;
 }
